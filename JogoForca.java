@@ -17,7 +17,7 @@ public class JogoForca {
             "JABUTICABA",
             "BANANA",
             "PESSEGO",
-			"MORANGO"
+            "MORANGO"
         };
 		
 		Random rnd = new Random();
@@ -59,7 +59,7 @@ public class JogoForca {
             }
             
 			// Reduz nro de chances se letra digitada nao existir.
-            if (letraEncontrada) {
+            if (!letraEncontrada) {
                 chancesRestantes--;
             }
         }
