@@ -17,6 +17,7 @@ public class JogoForca {
             "JABUTICABA",
             "BANANA",
             "PESSEGO",
+			"MORANGO"
         };
 		
 		Random rnd = new Random();
