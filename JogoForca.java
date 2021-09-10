@@ -17,7 +17,12 @@ public class JogoForca {
             "JABUTICABA",
             "BANANA",
             "PESSEGO",
-            "MORANGO"
+            "MORANGO",
+			"MONITOR",
+			"TECLADO",
+			"MOUSE",
+			"IMPRESSORA",
+			"SCANNER"
         };
 		
 		Random rnd = new Random();
