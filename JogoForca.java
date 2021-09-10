@@ -22,7 +22,11 @@ public class JogoForca {
 			"TECLADO",
 			"MOUSE",
 			"IMPRESSORA",
-			"SCANNER"
+			"SCANNER",
+			"GUITARRA",
+			"VIOLAO",
+			"VIOLINO",
+			"BAIXO"
         };
 		
 		Random rnd = new Random();
