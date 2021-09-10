@@ -36,6 +36,7 @@ public class JogoForca {
         int chancesRestantes = 10;
         String palavraSorteada = bancoPalavras[indicePalavraSorteada];
         int tamPalavraSorteada = palavraSorteada.length();
+		int nroLetrasReveladas = 0;
         char[] letrasEscondidas = palavraSorteada.toCharArray();
         char[] letrasReveladas = new char[tamPalavraSorteada];
         for (int i = 0; i < tamPalavraSorteada; i++) {
@@ -64,6 +65,7 @@ public class JogoForca {
                 if (letrasEscondidas[i] == letraDigitada) {
                     letraEncontrada = true;
                     letrasReveladas[i] = letrasEscondidas[i];
+					nroLetrasReveladas++;
                 }
             }
             
@@ -71,6 +73,13 @@ public class JogoForca {
             if (!letraEncontrada) {
                 chancesRestantes--;
             }
+			
+			// Verificar se usuario adivinhou toda a palavra
+			if (nroLetrasReveladas == tamPalavraSorteada) {
+				chancesRestantes = 0;
+				System.out.println("Você venceu!");
+			}
+				
         }
 
         System.out.println("===========");
