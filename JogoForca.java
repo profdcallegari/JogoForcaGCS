@@ -65,6 +65,9 @@ public class JogoForca {
                 if (letrasEscondidas[i] == letraDigitada) {
                     letraEncontrada = true;
                     letrasReveladas[i] = letrasEscondidas[i];
+                    if (letraDigitada == letrasReveladas[i]){
+                        continue;
+                    }
 					nroLetrasReveladas++;
                 }
             }
