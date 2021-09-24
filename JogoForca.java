@@ -18,25 +18,25 @@ public class JogoForca {
             "BANANA",
             "PESSEGO",
             "MORANGO",
-			"MONITOR",
-			"TECLADO",
-			"MOUSE",
-			"IMPRESSORA",
-			"SCANNER",
-			"GUITARRA",
-			"VIOLAO",
-			"VIOLINO",
-			"BAIXO"
+            "MONITOR",
+            "TECLADO",
+            "MOUSE",
+            "IMPRESSORA",
+            "SCANNER",
+            "GUITARRA",
+            "VIOLAO",
+            "VIOLINO",
+            "BAIXO"
         };
-		
-		Random rnd = new Random();
-		
+        
+        Random rnd = new Random();
+        
 
         int indicePalavraSorteada = rnd.nextInt(bancoPalavras.length);
         int chancesRestantes = 10;
         String palavraSorteada = bancoPalavras[indicePalavraSorteada];
         int tamPalavraSorteada = palavraSorteada.length();
-		int nroLetrasReveladas = 0;
+        int nroLetrasReveladas = 0;
         char[] letrasEscondidas = palavraSorteada.toCharArray();
         char[] letrasReveladas = new char[tamPalavraSorteada];
         for (int i = 0; i < tamPalavraSorteada; i++) {
@@ -44,7 +44,7 @@ public class JogoForca {
         }
 
 
-		// Loop do jogo
+        // Loop do jogo
         while (chancesRestantes > 0) {
             System.out.println("\nChances restantes: " + chancesRestantes);
             
@@ -65,21 +65,21 @@ public class JogoForca {
                 if (letrasEscondidas[i] == letraDigitada) {
                     letraEncontrada = true;
                     letrasReveladas[i] = letrasEscondidas[i];
-					nroLetrasReveladas++;
+                    nroLetrasReveladas++;
                 }
             }
             
-			// Reduz nro de chances se letra digitada nao existir.
+            // Reduz nro de chances se letra digitada nao existir.
             if (!letraEncontrada) {
                 chancesRestantes--;
             }
-			
-			// Verificar se usuario adivinhou toda a palavra
-			if (nroLetrasReveladas == tamPalavraSorteada) {
-				chancesRestantes = 0;
-				System.out.println("Você venceu!");
-			}
-				
+            
+            // Verificar se usuario adivinhou toda a palavra
+            if (nroLetrasReveladas == tamPalavraSorteada) {
+                chancesRestantes = 0;
+                System.out.println("Você venceu!");
+            }
+                
         }
 
         System.out.println("===========");
